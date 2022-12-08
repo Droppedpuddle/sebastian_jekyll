@@ -1,0 +1,20 @@
+{% include head.html %}
+  <body> 
+    <nav>
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+    </nav>
+    <h1>{{post.title}}</h1>
+    <section>
+      {{ content }}
+    </section>
+    <ul>
+      {% for category in page.categories %}
+          <li><a href="{{site.url | append: '/categories/'}}{{category}}">{{category}}</a></li>
+      {% endfor %}
+    </ul>
+    <footer>
+      &copy; to me
+    </footer>
+  </body>
+</html>
